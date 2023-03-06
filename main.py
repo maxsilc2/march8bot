@@ -10,7 +10,7 @@ import requests
 from io import BytesIO
 import random
 
-TOKEN = "5952042833:AAF1Gv-BeTz3S_2Y_dVKswGdJ0S7tR9WPX0"
+TOKEN = "6024345369:AAF__ShNzfEBIoKVB3tNETNqZNcc7-CRuWY"
 bot = telebot.TeleBot(TOKEN)
 
 def getargs(text):
