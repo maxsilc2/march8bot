@@ -71,7 +71,10 @@ def get_text(message):
        bot.send_message(message.chat.id, 'Этот весенний подарок от нашей команды создан специально для тебя!')
        bot.send_message(message.chat.id, ' Регистрируйся на понравившийся курс от наших друзей школы Masters, используя данный промокод')
        bot.send_message(message.chat.id, code[whatif(message.text.lower())])
-       bot.send_message(message.chat.id, 'Здесь:')(message.chat.id,'инструкция по регистрации', url = 'https://docs.google.com/document/d/1zZ5hmAe_VFGwtfn5Vnsu6Wcm4KjFOCqPpsKiDo5GNnE/edit?usp=sharing')
+       markup_inline2 = types.InlineKeyboardMarkup()
+       item_0 = types.InlineKeyboardButton(text = 'инструкция по регистрации', callback_data = '1', url = 'https://docs.google.com/document/d/1zZ5hmAe_VFGwtfn5Vnsu6Wcm4KjFOCqPpsKiDo5GNnE/edit?usp=sharing')
+       markup_inline2.add(item_0)
+       bot.send_message(message.chat.id, 'Здесь:', reply_markup = markup_inline2)
        bot.send_message(message.chat.id, 'Получай море вдохновения и весеннего настроения вместе с командой Dazzz')
   else :
        bot.send_message(message.chat.id, 'Я не нашел такого имени, попробуй ввести полное имя 🥺')
