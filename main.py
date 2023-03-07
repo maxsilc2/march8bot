@@ -11,8 +11,8 @@ from io import BytesIO
 import random
 import array
 
-people = ["янина новицкая", "алина соловьева", "полина крутских","виктория крихели","настя винниченко","дина павлова","кристина проскурякова","полина леженина","вика одинцова","женя бажутова","марета","лена минченко","маша троя","катя ???","анна красавина","нургуль мартс","натали салий","марика","марина левочкина","марина романова","ирина микоян","екатерина кутумова","елена мариева","света сегеда","мария шишова","олеся панова","юля мошкович","+1 for loop"]
-code = ["VBRE3CJD","UT5BQZ4N","649H82EN","EYP8EWAG","GQJSCKMH","APAMYQ2P","QX7GT6VS","VNUZQC4H","4QW9A7ER","WQFYHGR2","T6JRYX28","G8DX8NZ2","KSADA8F9","HK5ABAYW","Q2CZMJ92","95QGX7HM","TRZS22QU","M52EU3PV","DXVD3YF8","FJ5JA3JF","VBRE3CJD","M5SXG6NG","8Q2FMVAF","6QXKXPF4","4PTYDXAU","T3RMR9BJ","WW7JJNHN"]
+people = ["янина новицкая", "алина соловьева", "полина крутских","виктория крихели","настя винниченко","дина павлова","кристина проскурякова","полина леженина","вика одинцова","женя бажутова","марета","лена минченко","маша троя","екатерина пескова","анна красавина","нургуль мартс","натали салий","марика","марина левочкина","марина романова","ирина микоян","екатерина кутумова","елена мариева","света сегеда","мария шишова","олеся панова","юля мошкович","ээээ"]
+code = ["VBRE3CJD","UT5BQZ4N","649H82EN","EYP8EWAG","GQJSCKMH","APAMYQ2P","QX7GT6VS","VNUZQC4H","4QW9A7ER","WQFYHGR2","T6JRYX28","G8DX8NZ2","KSADA8F9","HK5ABAYW","Q2CZMJ92","95QGX7HM","TRZS22QU","M52EU3PV","DXVD3YF8","FJ5JA3JF","VBRE3CJD","M5SXG6NG","8Q2FMVAF","6QXKXPF4","4PTYDXAU","T3RMR9BJ","WW7JJNHN","эээээээээээ"]
 TOKEN = "6024345369:AAF__ShNzfEBIoKVB3tNETNqZNcc7-CRuWY"
 bot = telebot.TeleBot(TOKEN)
 
@@ -57,22 +57,24 @@ def get_text(message):
        download_file("https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9749A770FEB768336D57A6EB96EC3F83_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uNzIwLmNsaXBzLmJhc2VsaW5lIn0&_nc_ht=instagram.ftas2-1.fna.fbcdn.net&_nc_cat=104&vs=1276778489591918_578504870&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85NzQ5QTc3MEZFQjc2ODMzNkQ1N0E2RUI5NkVDM0Y4M192aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0hQMTlCUEhrbU1IMzFZRUFNWDZSODdUMUVZbGJxX0VBQUFGFQICyAEAKAAYABsAFQAAJurYruib2fo%2FFQIoAkMzLBdARQQ5WBBiThgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=1e89be8e90&ccb=9-4&oh=00_AfCAu0UkybzbJ4U8PklZm8fiDBpZeZreVGBXhOrll2g-ig&oe=64083A9F&_nc_sid=30a2ef", "fortune.mp4")
        vidnet = open("fortune.mp4", "rb")
        bot.send_video(message.chat.id, vidnet)
+       time.sleep(50)
        bot.send_message(message.chat.id,"Ура! Ты выиграла главный приз!")
        bot.send_message(message.chat.id,"Пришли нам в ответ на это сообщение - сердечко ❤️ и порадуйся вместе с нами!", 
                       reply_markup = markup_reply)
   elif message.text == '❤️':
        bot.send_message(message.chat.id,"Успешной женщине, всегда улыбается удача)")
-       bot.send_message(message.chat.id,"Пришли свое имя и фамилию русскими буквами (например: Мирослава Байда), чтобы получить свой Персональный подарок ")
+       bot.send_message(message.chat.id,"Пришли свое полное имя и фамилию русскими буквами (например: Мирослава Байда), чтобы получить свой Персональный подарок 💕")
   elif message.text.lower() == 'анастасия колтунова' or message.text.lower() == 'максим си' or message.text.lower() == 'макси':
        bot.send_message(message.chat.id, 'Привет создатель!')          
   elif whatif(message.text.lower())<=26 :
-       bot.send_message(message.chat.id, 'Поздравляем!!!')
-       bot.send_message(message.chat.id, 'Этот подарок создан специально для тебя!')
-       bot.send_message(message.chat.id, 'Регистрируйся на понравившийся курс от наших друзей школы Masters используя данный промокод!')
+       bot.send_message(message.chat.id, 'Поздравляем!')
+       bot.send_message(message.chat.id, 'Этот весенний подарок от нашей команды создан специально для тебя!')
+       bot.send_message(message.chat.id, ' Регистрируйся на понравившийся курс от наших друзей школы Masters, используя данный промокод')
        bot.send_message(message.chat.id, code[whatif(message.text.lower())])
-       bot.send_message(message.chat.id, 'Получай море вдохновения и весеннего настроения вместе с командой Dazzz.')
+       bot.send_message(message.chat.id, 'Здесь: инструкция по регистрации (https://docs.google.com/document/d/1zZ5hmAe_VFGwtfn5Vnsu6Wcm4KjFOCqPpsKiDo5GNnE/edit?usp=sharing)')
+       bot.send_message(message.chat.id, 'Получай море вдохновения и весеннего настроения вместе с командой Dazzz')
   else :
-       bot.send_message(message.chat.id, 'Я не нашел такого имени, попробуй ввести полное имя или сокращенное🥺')
+       bot.send_message(message.chat.id, 'Я не нашел такого имени, попробуй ввести полное имя 🥺')
 
     
 
